@@ -1,0 +1,23 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" width="240" height="63" viewBox="0 0 240 63">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 60px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #feffff;
+        font-family: Roboto;
+        text-transform: uppercase;
+      }
+
+      .cls-2 {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text id="fac" class="cls-1" x="-2.933" y="42.922">fac</text>
+  <text id="Fancy_a_cocktail_" data-name="Fancy a cocktail?" class="cls-2" x="34.346" y="63.058">Fancy a cocktail?</text>
+</svg>
