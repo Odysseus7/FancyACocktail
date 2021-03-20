@@ -1,24 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
-
-*::before,
-*,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Roboto", "sans-serif";
-}
-
-a {
-	text-decoration: none;
-	color: #fff;
-	transition: all 0.5s;
-}
-
-a:hover {
-	color: #a9abaf;
-}
-
 main {
 	width: 100%;
 	height: 100vh;
@@ -42,6 +21,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 .searchbar {
@@ -66,7 +46,12 @@ main {
 }
 
 .radiobtns input[type="radio"] {
-	margin: 0 1.5rem;
+	/* margin: 0 1.5rem; */
+	margin-right: 1.5rem;
+}
+
+#name {
+	margin-left: 2rem;
 }
 
 footer ul {
