@@ -71,4 +71,14 @@ footer ul li {
 	.search article {
 		margin: 0 0 1rem 0;
 	}
+
+	.radiobtns {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.radiobtns input[type="radio"] {
+		/* margin: 0 1.5rem; */
+		margin-right: 0.2rem;
+	}
 }
