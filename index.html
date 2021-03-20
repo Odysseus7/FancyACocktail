@@ -9,22 +9,29 @@
 </head>
 <body>
     <main>
-        <header>
+        <header class="logo" >
             <img src="./img/logo.svg" alt="Logo">
         </header>
         <section class="search">
-            <input type="radio" id="ingredients" name="filter" value="ingredients" />
-            <label for="ingredients">Ingredients</label>
+            <div class="radiobtns">
+                <article>
+                    <input type="radio" id="ingredients" name="filter" value="ingredients" />
+                    <label for="ingredients">Ingredients</label>
+                </article>
+                
+                <article>
+                    <input type="radio" id="name" name="filter" value="name" checked />
+                    <label for="name">Name</label>
+                </article>
+                
+            </div>
 
-            <input type="radio" id="name" name="filter" value="name" />
-            <label for="name">Name</label>
-
-            <input type="text" name="search" id="search" placeholder="SEARCH..">
+            <input type="text" name="search" class="searchbar" placeholder="SEARCH..">
         </section>
         <footer>
             <ul class="nav">
-                <li>about us</li>
-                <li>contact</li>
+                <li><a href="./about.html">about us</a></li>
+                <li><a href="./contact.html">contact</a></li>
             </ul>
         </footer>
     </main>

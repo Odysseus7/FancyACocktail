@@ -1,23 +1,4 @@
-<svg id="logo" xmlns="http://www.w3.org/2000/svg" width="240" height="63" viewBox="0 0 240 63">
-  <defs>
-    <style>
-      .cls-1 {
-        font-size: 60px;
-        font-weight: 700;
-      }
-
-      .cls-1, .cls-2 {
-        fill: #feffff;
-        font-family: Roboto;
-        text-transform: uppercase;
-      }
-
-      .cls-2 {
-        font-size: 18px;
-        font-weight: 300;
-      }
-    </style>
-  </defs>
-  <text id="fac" class="cls-1" x="-2.933" y="42.922">fac</text>
-  <text id="Fancy_a_cocktail_" data-name="Fancy a cocktail?" class="cls-2" x="34.346" y="63.058">Fancy a cocktail?</text>
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="63" viewBox="0 0 240 63">
+  <image id="logo" width="240" height="63" xlink:href="data:image/png;base64,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"/>
 </svg>
