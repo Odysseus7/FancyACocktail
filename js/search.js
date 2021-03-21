@@ -7,7 +7,7 @@ const handleSearch = (event) => {
 
     if(keyword.match(letters)) {
         // if the input is valid, redirect and save search term and filter used.
-        window.location.href = `results.html?keyword=${event.target.value}?filter=${filter}`;
+        window.location.href = `results.html?keyword=${event.target.value}&filter=${filter}`;
     } else {
         alert("invalid input");
     }
