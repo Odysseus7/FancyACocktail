@@ -38,8 +38,8 @@ main {
 	margin-top: 3rem;
 }
 
-footer {
-	position: relative;
+footer p {
+	position: unset;
 }
 
 /* MEDIA QUERIES */
