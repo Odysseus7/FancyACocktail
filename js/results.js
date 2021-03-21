@@ -31,7 +31,7 @@ const fetchRecipesByIngredient = async (ingredient) => {
 }
 
 const handleDisplay = (cocktails) => {
-    
+    console.log(cocktails);
 
     container.insertAdjacentHTML('beforebegin', `
         <div class="back">
@@ -42,22 +42,32 @@ const handleDisplay = (cocktails) => {
     cocktails.forEach(cocktail => {
         container.insertAdjacentHTML(
         'beforeend',
-        `<article class="card">
+        `<article class="card" data-id=${cocktail.idDrink}>
             <figure>
-                <img src="${cocktail.strDrinkThumb}" alt="Classic burger">
+                <img src="${cocktail.strDrinkThumb}" alt=${cocktail.strDrink}>
             </figure>
             <h2>${cocktail.strDrink}</h2>
             
-            <button data-id="${cocktail.idDrink}">Get instructions</button>
+            <button class="btn">Get instructions</button>
         </article>
         `
         );
+        
+    });
+
+    document.querySelectorAll(".btn").forEach(button => {
+            button.addEventListener("click", () => {
+                window.location.href = `./../recipe.html?drinkId=${button.parentNode.dataset.id}`;
+            });
     });
 
     
+
+
 }
 
-const handleError = () => {
+
+export const handleError = () => {
     container.insertAdjacentHTML('beforebegin', `
         <div class="back">
             <a href="./index.html"><h1>&larr; Go back</h1><a href="./index.html">
@@ -73,13 +83,16 @@ const handleError = () => {
         );
 }
 
-// check if url parameters change
-if(filter != "name" && filter != "ingredient") {
-    alert("invalid filter");
-    window.location.href = "./index.html";
-} else if(filter == "name") {
-    fetchRecipesByName(keyword)
-} else if(filter == "ingredient") {
-    fetchRecipesByIngredient(keyword);
+window.onload = () => {
+    // check if url parameters change
+    if(filter != "name" && filter != "ingredient" && window.location.href == "./results.html") {
+        alert("invalid filter");
+        window.location.href = "./index.html";
+    } else if(filter == "name") {
+        fetchRecipesByName(keyword)
+    } else if(filter == "ingredient") {
+        fetchRecipesByIngredient(keyword);
+    }
 }
+
 
