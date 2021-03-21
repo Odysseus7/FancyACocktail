@@ -1,3 +1,17 @@
 body {
 	background-color: #18191a;
 }
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: center;
+}
+
+.card {
+	background: none;
+}
+
+.card:hover {
+	transform: translateY(0);
+}

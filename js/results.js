@@ -31,8 +31,6 @@ const fetchRecipesByIngredient = async (ingredient) => {
 }
 
 const handleDisplay = (cocktails) => {
-    console.log(cocktails);
-
     container.insertAdjacentHTML('beforebegin', `
         <div class="back">
             <a href="./index.html"><h1>&larr; Go back</h1></a>
@@ -65,7 +63,6 @@ const handleDisplay = (cocktails) => {
 
 
 }
-
 
 export const handleError = () => {
     container.insertAdjacentHTML('beforebegin', `
