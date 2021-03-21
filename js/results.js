@@ -9,7 +9,9 @@ const fetchRecipesByName = async (name) => {
     .then(response => {
         const data = response.data.drinks;
         if(data != null) {
+            document.title = name;
             handleDisplay(data);
+            
         } else {
             handleError();
         }
