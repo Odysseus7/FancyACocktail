@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
 const keyword = urlParams.get("keyword");
 const filter = urlParams.get("filter");
+const container = document.querySelector(".container");
 
 const fetchRecipesByName = async (name) => {
     await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
@@ -30,7 +31,7 @@ const fetchRecipesByIngredient = async (ingredient) => {
 }
 
 const handleDisplay = (cocktails) => {
-    const container = document.querySelector(".container");
+    
 
     container.insertAdjacentHTML('beforebegin', `
         <div class="back">
@@ -59,9 +60,10 @@ const handleDisplay = (cocktails) => {
 const handleError = () => {
     container.insertAdjacentHTML('beforebegin', `
         <div class="back">
-            <h1>&larr; Go back</h1>
+            <a href="./index.html"><h1>&larr; Go back</h1><a href="./index.html">
         </div>
     `);
+
     document.querySelector(".container").insertAdjacentHTML(
         'afterbegin',
         `<div class="heading">
