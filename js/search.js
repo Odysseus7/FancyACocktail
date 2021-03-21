@@ -1,7 +1,8 @@
 const searchBar = document.querySelector(".searchbar");
 
+
 const handleSearch = (event) => {
-    var letters = /^[A-Za-z]+$/;
+    var letters = /^[a-zA-Z\s]*$/;
     let keyword = event.target.value.toLowerCase();
     const filter = document.querySelector("input[type=radio]:checked").value;
 
@@ -14,4 +15,7 @@ const handleSearch = (event) => {
 
 }
 
-searchBar.addEventListener("change", handleSearch);
+window.onload = () => {
+    searchBar.addEventListener("change", handleSearch);
+};
+

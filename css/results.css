@@ -2,6 +2,75 @@ body {
 	background-color: #18191a;
 }
 
+main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	justify-content: center;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+.back {
+	margin-left: 5rem;
+	margin-top: 2rem;
+	animation: pulse 2s infinite;
+}
+
+.back,
+h1 {
+	display: block;
+}
+
+.card {
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #1e2026;
+	text-align: center;
+	transition: all 1.2s;
+}
+
+.card:hover {
+	transform: translateY(-15px);
+}
+
+figure img {
+	max-width: 10rem;
+	height: auto;
+	border-radius: 10px;
+	margin: 0.5rem 0;
+}
+
+h2 {
+	padding: 1rem 0;
+}
+
+p {
+	width: 50%;
+	font-size: 0.9rem;
+	color: #bdb7c7;
+	line-height: 1.7;
+	letter-spacing: 0.25px;
+}
+
+button {
+	margin-top: 1rem;
+	padding: 0.75rem 3.5rem;
+	border: 0;
+	border-radius: 10px;
+	background-color: #00d2d3;
+	color: #fcfcfc;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+}
+
+button:hover {
+	background-color: #01a3a4;
+	cursor: pointer;
+}
+
 .heading {
 	display: flex;
 	justify-content: center;
@@ -15,6 +84,25 @@ body {
 	color: #e4e6eb;
 }
 
+/* MEDIA QUERIES*/
+
+@media only screen and (max-width: 450px) {
+	main {
+		grid-template-columns: 1fr;
+	}
+
+	.card {
+		margin: 0 1rem;
+	}
+
+	button {
+		margin-top: 1rem;
+		padding: 0.75rem 2rem;
+	}
+}
+
+/* ANIMATIONS */
+
 @keyframes fadeInUpBig {
 	from {
 		opacity: 0;
@@ -26,5 +114,22 @@ body {
 		opacity: 1;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes pulse {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		-webkit-transform: scale3d(1.05, 1.05, 1.05);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
 	}
 }
