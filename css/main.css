@@ -8,6 +8,7 @@
 	box-sizing: border-box;
 	font-family: "Roboto", "sans-serif";
 	color: #e4e6eb;
+	max-width: 100%;
 }
 
 a {
@@ -32,4 +33,16 @@ footer p {
 	left: 2rem;
 	padding: 1rem 0;
 	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+}
+
+.nav li {
+	padding: 0 1rem;
+	font-size: 1rem;
+	text-transform: uppercase;
 }
