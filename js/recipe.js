@@ -20,6 +20,7 @@ const fetchRecipe = async (id) => {
 
 const handleDisplay = cocktail => {
     console.log(cocktail);
+    document.title = cocktail.strDrink;
     container.insertAdjacentHTML('afterbegin', `
         <article class="card" data-id=${cocktail.idDrink}>
             <figure>
