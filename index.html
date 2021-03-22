@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>FAC: Fancy a cocktail?</title>
-</head>
-<body>
-    <main>
-        <header class="logo" >
-            <img src="./img/logo.svg" alt="Logo">
-        </header>
-        <section class="search">
-            <div class="radiobtns">
-                <article>
-                    <input type="radio" id="ingredient" name="filter" value="ingredient" />
-                    <label for="ingredient">Ingredient</label>
-                </article>
-                
-                <article>
-                    <input type="radio" id="name" name="filter" value="name" checked />
-                    <label for="name">Name</label>
-                </article>
-                
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<title>FAC: Fancy a cocktail?</title>
+	</head>
+	<body>
+		<main>
+			<header class="logo">
+				<img src="./img/logo.svg" alt="Logo" />
+			</header>
+			<section class="search">
+				<div class="radiobtns">
+					<article>
+						<input
+							type="radio"
+							id="ingredient"
+							name="filter"
+							value="ingredient"
+						/>
+						<label for="ingredient">Ingredient</label>
+					</article>
 
-            <input type="text" name="search" class="searchbar" placeholder="SEARCH..">
-            
-        </section>
-        <footer>
-            <ul class="nav">
-                <li><a href="./about.html">about us</a></li>
-                <li><a href="./contact.html">contact</a></li>
-            </ul>
-            <p>&copy; Chalita Ndunu</p>
-        </footer>
-    </main>
+					<article>
+						<input type="radio" id="name" name="filter" value="name" checked />
+						<label for="name">Name</label>
+					</article>
+				</div>
 
-    <script src="./js/search.js"></script>
-</body>
+				<input
+					type="text"
+					name="search"
+					class="searchbar"
+					placeholder="SEARCH.."
+				/>
+			</section>
+			<footer>
+				<ul class="nav">
+					<li><a href="./about.html">about us</a></li>
+					<li><a href="./shop.html">shop</a></li>
+					<li><a href="./contact.html">contact</a></li>
+					<li><a href="./sources.html">sources</a></li>
+				</ul>
+				<p>&copy; Chalita Ndunu</p>
+			</footer>
+		</main>
+
+		<script src="./js/search.js"></script>
+	</body>
 </html>
