@@ -35,8 +35,9 @@ const handleDisplay = (cocktail) => {
 	const ingredientKeys = Object.keys(cocktail).filter(
 		(key) => key.includes("strIngredient") && cocktail[key]
 	);
-	const measureKeys = ingredientKeys.map((key) =>
-		key.replace("Ingredient", "Measure")
+
+	const measureKeys = Object.keys(cocktail).filter(
+		(key) => key.includes("strMeasure") && cocktail[key]
 	);
 
 	const measures = measureKeys.map((key) => cocktail[key].trim());
