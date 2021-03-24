@@ -17,7 +17,8 @@ a {
 	transition: all 0.5s;
 }
 
-a:hover {
+a:hover,
+a li:hover {
 	color: #a9abaf;
 }
 
