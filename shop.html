@@ -19,7 +19,7 @@
 				<section class="shop">
 					<h1>Shop</h1>
 					<div class="cards">
-						<article class="card">
+						<article class="card" data-id="cs">
 							<figure>
 								<img
 									src="https://images.unsplash.com/photo-1531002329786-97e3efcb754b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
@@ -30,7 +30,7 @@
 							<h3>&euro;25,99</h3>
 							<button class="btn">Buy</button>
 						</article>
-						<article class="card">
+						<article class="card" data-id="dg">
 							<figure>
 								<img
 									src="https://images.unsplash.com/photo-1530914547840-346c183410de?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
@@ -41,7 +41,7 @@
 							<h3>&euro;18,50</h3>
 							<button class="btn">Buy</button>
 						</article>
-						<article class="card">
+						<article class="card" data-id="cd">
 							<figure>
 								<img
 									src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80"
@@ -52,7 +52,7 @@
 							<h3>&euro;15,00</h3>
 							<button class="btn">Buy</button>
 						</article>
-						<article class="card">
+						<article class="card" data-id="mock">
 							<figure>
 								<img
 									src="https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1105&q=80"
@@ -67,7 +67,20 @@
 				</section>
 			</section>
 			<section class="receipt">
-				hello world
+				<article class="cart">
+					<h1>Cart</h1>
+					<article class="cartlist">
+						<article class="cartitem">
+							<h2>cocktail set</h2>
+							<p>6x</p>
+							<p>&euro;25,99</p>
+						</article>
+					</article>
+					<article class="total">
+						<h1>Total: &euro;25,99</h1>
+					</article>
+				</article>
+
 				<footer>
 					<ul class="nav">
 						<li><a href="./index.html">home</a></li>
@@ -79,5 +92,6 @@
 				</footer>
 			</section>
 		</main>
+		<script src="./js/shop.js"></script>
 	</body>
 </html>
