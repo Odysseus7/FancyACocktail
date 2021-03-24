@@ -37,10 +37,31 @@ const handleButtonClick = (event) => {
 
 	let totalCost = 0;
 
-	// update total cost of shopping cart
 	Object.keys(cart).forEach((key) => {
+		// update total cost of shopping cart
 		totalCost += cart[key].totalCost;
-		totalText.innerHTML = `Total: &euro;${totalCost}`;
+		totalText.innerHTML = `Total: &euro;${totalCost.toFixed(2)}`;
+
+		// if the product is not in the cart yet, and the products counter does not equal zero, add it.
+		if (!document.querySelector(`.${key}`) && cart[key].counter != 0) {
+			cartlist.insertAdjacentHTML(
+				"beforeend",
+				`
+                    <article class="cartitem ${key}">
+                                        <h2>${cart[key].title}</h2>
+                                        <p>${cart[key].counter}x</p>
+                                        <p>&euro;${cart[key].totalCost.toFixed(
+																					2
+																				)}</p>
+                                    </article>
+                    `
+			);
+		} else if (document.querySelector(`.${key}`) && cart[key].counter >= 0) {
+			const cartItem = document.querySelector(`.${key}`);
+			console.log(cartItem.childNodes);
+			cartItem.childNodes[3].innerHTML = `${cart[key].counter}`;
+			cartItem.childNodes[5].innerHTML = `${cart[key].totalCost.toFixed(2)}`;
+		}
 	});
 };
 
@@ -51,15 +72,5 @@ buttons.forEach((button) => {
 Object.keys(cart).forEach((key) => {
 	console.log(key, cart[key]);
 	if (cart[key].counter != 0) {
-		cartlist.insertAdjacentHTML(
-			"beforeend",
-			`
-        <article class="cartitem">
-							<h2>${cart[key].title}</h2>
-							<p>${cart[key].counter}x</p>
-							<p>&euro;${cart[key.totalCost]}</p>
-						</article>
-        `
-		);
 	}
 });
