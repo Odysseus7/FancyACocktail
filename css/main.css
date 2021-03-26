@@ -217,6 +217,104 @@ textarea {
 	position: unset;
 }
 
+/* -----SHOP----- */
+.shop-main {
+	background-color: #18191a;
+	overflow: hidden;
+}
+.shop-logo {
+	margin-bottom: 4rem;
+	animation: fadeIn 2s;
+}
+
+.shopcontainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem;
+}
+
+.shop {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.shop h1 {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+.shop-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	justify-content: center;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+.shop-card {
+	background-color: inherit !important;
+}
+
+.shop-card h3 {
+	font-weight: 300;
+}
+
+.receipt {
+	height: 50vh;
+	width: 100%;
+	background-size: cover;
+	margin-bottom: 2rem;
+}
+
+.shop-nav {
+	margin-top: 3rem;
+}
+
+.shop-footer p {
+	position: unset;
+}
+
+.cart {
+	padding: 0 4rem;
+	text-align: center;
+}
+
+.cart h1 {
+	margin-bottom: 2rem;
+}
+
+.cartlist {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cartitem {
+	border-top: 1px solid #e4e6eb;
+	border-bottom: 1px solid #e4e6eb;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.cartitem h2 {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+.cartitem h1,
+.cartitem p {
+	margin: auto 0;
+}
+
+.total {
+	margin-top: 2rem;
+}
+
 /* MEDIA QUERIES */
 /* -----INDEX----- */
 @media only screen and (max-width: 500px) {
@@ -288,5 +386,44 @@ textarea {
 	.contactform input,
 	.contactform textarea {
 		width: 70%;
+	}
+}
+
+/* -----SHOP----- */
+@media only screen and (min-width: 1100px) {
+	.shop,
+	.shop-cards {
+		width: 100%;
+	}
+
+	.receipt {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.cart {
+		width: 100%;
+	}
+
+	.shop-main {
+		display: flex;
+		width: 100%;
+		min-height: 100vh;
+	}
+
+	.shop-container {
+		width: 100%;
+		padding: 0 4rem;
+	}
+
+	.shop-nav {
+		margin-top: 6rem;
+	}
+
+	.shop-footer {
+		position: unset;
 	}
 }
