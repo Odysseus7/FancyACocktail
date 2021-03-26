@@ -59,7 +59,7 @@ const handleButtonClick = (event) => {
 		} else if (document.querySelector(`.${key}`) && cart[key].counter >= 0) {
 			const cartItem = document.querySelector(`.${key}`);
 			console.log(cartItem.childNodes);
-			cartItem.childNodes[3].innerHTML = `${cart[key].counter}`;
+			cartItem.childNodes[3].innerHTML = `${cart[key].counter}x`;
 			cartItem.childNodes[5].innerHTML = `${cart[key].totalCost.toFixed(2)}`;
 		}
 	});
