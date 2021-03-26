@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
 const keyword = urlParams.get("keyword");
 const filter = urlParams.get("filter");
-const container = document.querySelector(".container");
+const container = document.querySelector(".results-main");
 
 const fetchRecipesByName = async (name) => {
 	await axios
@@ -37,7 +37,7 @@ const handleDisplay = (cocktails) => {
 	container.insertAdjacentHTML(
 		"beforebegin",
 		`
-        <div class="back">
+        <div class=".results-back">
             <a href="./index.html"><h1>&larr; Go back</h1></a>
         </div>
     `
@@ -46,7 +46,7 @@ const handleDisplay = (cocktails) => {
 	cocktails.forEach((cocktail) => {
 		container.insertAdjacentHTML(
 			"beforeend",
-			`<article class="card" data-id=${cocktail.idDrink}>
+			`<article class="results-card" data-id=${cocktail.idDrink}>
             <figure>
                 <img src="${cocktail.strDrinkThumb}" alt=${cocktail.strDrink}>
             </figure>
