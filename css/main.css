@@ -478,8 +478,16 @@ textarea {
 }
 
 .sources-footer ul {
-	margin-top: 2rem;
+	margin-top: 4rem;
 	margin-bottom: 6rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.sources-footer li {
+	font-size: 1rem;
+	margin-top: 1rem;
 }
 
 .main-listitem {
@@ -654,7 +662,7 @@ textarea {
 		padding: 4rem 8rem;
 	}
 
-	.sources-nav {
+	.sources-footer ul {
 		margin-top: 6rem;
 	}
 
