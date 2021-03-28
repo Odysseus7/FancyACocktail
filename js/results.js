@@ -37,7 +37,7 @@ const handleDisplay = (cocktails) => {
 	container.insertAdjacentHTML(
 		"beforebegin",
 		`
-        <div class=".results-back">
+        <div class="results-back">
             <a href="./index.html"><h1>&larr; Go back</h1></a>
         </div>
     `

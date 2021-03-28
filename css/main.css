@@ -326,6 +326,7 @@ textarea {
 }
 
 .results-back {
+	font-size: 0.7rem;
 	margin-left: 5rem;
 	margin-top: 2rem;
 	animation: pulse 2s infinite;
@@ -390,6 +391,55 @@ textarea {
 
 .errorHeading {
 	color: #e4e6eb;
+}
+
+/* -----RECIPE PAGE----- */
+.recipe-main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+		url("https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.recipe-card {
+	background: none;
+}
+
+.recipe-card:hover {
+	transform: translateY(0);
+}
+
+.recipe-card p {
+	color: inherit;
+	width: 50%;
+}
+
+.ingredients {
+	padding: 2rem 0;
+	animation: fadeIn 4s;
+	color: inherit;
+}
+
+.ingredients li {
+	padding: 0 1rem;
+}
+
+.recipe-back {
+	font-size: 0.7rem;
+	margin-left: 5rem;
+	margin-top: 2rem;
+	animation: pulse 2s infinite;
+	width: 20%;
+	position: absolute;
+}
+
+.recipe-back h1 {
+	display: block;
 }
 
 /* MEDIA QUERIES */
@@ -518,6 +568,20 @@ textarea {
 	.results-card button {
 		margin-top: 1rem;
 		padding: 0.75rem 2rem;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.results-back {
+		font-size: 0.5rem;
+	}
+}
+
+/* -----RECIPE----- */
+
+@media only screen and (max-width: 800px) {
+	.recipe-back {
+		font-size: 0.5rem;
 	}
 }
 

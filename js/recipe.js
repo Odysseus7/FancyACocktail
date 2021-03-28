@@ -5,7 +5,7 @@ const id = urlParams.get("drinkId");
 const keyword = urlParams.get("keyword");
 const filter = urlParams.get("filter");
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".recipe-main");
 
 const fetchRecipe = async (id) => {
 	await axios
@@ -25,7 +25,7 @@ const handleDisplay = (cocktail) => {
 	container.insertAdjacentHTML(
 		"beforebegin",
 		`
-        <div class="back">
+        <div class="recipe-back">
             <a href="./results.html?keyword=${keyword}&filter=${filter}"><h1>&larr; Go back</h1></a>
         </div>
     `
@@ -52,7 +52,7 @@ const handleDisplay = (cocktail) => {
 	container.insertAdjacentHTML(
 		"afterbegin",
 		`
-        <article class="card" data-id=${cocktail.idDrink}>
+        <article class="results-card recipe-card" data-id=${cocktail.idDrink}>
             <figure>
                 <img src="${cocktail.strDrinkThumb}" alt=${cocktail.strDrink}>
             </figure>
