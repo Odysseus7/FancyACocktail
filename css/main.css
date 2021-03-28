@@ -15,6 +15,10 @@ body {
 	background-color: #18191a;
 }
 
+h1 {
+	margin-bottom: 1rem;
+}
+
 .logo {
 	margin-bottom: 5rem;
 }
@@ -222,12 +226,13 @@ textarea {
 	background-color: #18191a;
 	overflow: hidden;
 }
+
 .shop-logo {
 	margin-bottom: 4rem;
 	animation: fadeIn 2s;
 }
 
-.shopcontainer {
+.shop-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -263,6 +268,9 @@ textarea {
 }
 
 .receipt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	height: 50vh;
 	width: 100%;
 	background-size: cover;
@@ -279,7 +287,6 @@ textarea {
 
 .cart {
 	padding: 0 4rem;
-	text-align: center;
 }
 
 .cart h1 {
@@ -298,21 +305,27 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	padding: 1rem 4rem;
 }
 
-.cartitem h2 {
-	text-align: left;
-	font-size: 1rem;
+.cartitem li {
 	font-weight: 300;
+	list-style: none;
+	list-style-position: inside;
 }
 
-.cartitem h1,
-.cartitem p {
-	margin: auto 0;
+.cartitem li:first-child {
+	font-size: 1rem;
+	font-weight: 400;
+	width: 20%;
+}
+
+.total-heading {
+	margin-top: 2rem;
 }
 
 .total {
-	margin-top: 2rem;
+	text-align: center;
 }
 
 /* -----RESULTS PAGE----- */
@@ -364,7 +377,9 @@ textarea {
 	padding: 1rem 0;
 }
 
-.results-card button {
+.results-card button,
+.btn,
+.btn-proceed {
 	margin-top: 1rem;
 	padding: 0.75rem 3.5rem;
 	border: 0;
@@ -375,7 +390,9 @@ textarea {
 	letter-spacing: 1.5px;
 }
 
-.results-card button:hover {
+.results-card button:hover,
+.btn,
+.btn-proceed {
 	background-color: #01a3a4;
 	cursor: pointer;
 }
@@ -573,10 +590,25 @@ textarea {
 }
 
 /* -----SHOP----- */
+@media only screen and (max-width: 800px) {
+	.cart {
+		padding: 0 0;
+	}
+	.cartitem li:first-child {
+		width: 100%;
+	}
+	.cartitem li {
+		margin: 0 1rem;
+	}
+}
 @media only screen and (min-width: 1100px) {
 	.shop,
 	.shop-cards {
 		width: 100%;
+	}
+
+	.shop-logo {
+		margin-top: 2rem;
 	}
 
 	.receipt {

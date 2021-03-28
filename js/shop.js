@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll(".btn");
-const cartlist = document.querySelector(".cartlist");
-const totalText = document.querySelector(".total");
+const proceedButton = document.querySelector(".btn-proceed");
+const cartlist = document.querySelector(".cart");
+const totalText = document.querySelector(".total-heading");
 
 const cart = {
 	cocktailSet: {
@@ -47,18 +48,18 @@ const handleButtonClick = (event) => {
 			cartlist.insertAdjacentHTML(
 				"beforeend",
 				`
-                    <article class="cartitem ${key}">
-                                        <h2>${cart[key].title}</h2>
-                                        <p>${cart[key].counter}x</p>
-                                        <p>&euro;${cart[key].totalCost.toFixed(
+                    <ul class="cartitem ${key}">
+                                        <li>${cart[key].title}</li>
+                                        <li>${cart[key].counter}x</li>
+                                        <li>&euro;${cart[key].totalCost.toFixed(
 																					2
-																				)}</p>
-                                    </article>
+																				)}</li>
+                                    </ul>
                     `
 			);
 		} else if (document.querySelector(`.${key}`) && cart[key].counter >= 0) {
+			/* Generate cart values and price*/
 			const cartItem = document.querySelector(`.${key}`);
-			console.log(cartItem.childNodes);
 			cartItem.childNodes[3].innerHTML = `${cart[key].counter}x`;
 			cartItem.childNodes[5].innerHTML = `${cart[key].totalCost.toFixed(2)}`;
 		}
@@ -69,8 +70,12 @@ buttons.forEach((button) => {
 	button.addEventListener("click", handleButtonClick);
 });
 
-Object.keys(cart).forEach((key) => {
-	console.log(key, cart[key]);
-	if (cart[key].counter != 0) {
+proceedButton.addEventListener("click", () => {
+	if (!document.querySelector(".cartitem")) {
+		alert("Can't proceed with an empty cart!");
+	} else {
+		alert(
+			`Order placed. Your order number is ${Math.round(Math.random() * 2000)}.`
+		);
 	}
 });
