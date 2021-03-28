@@ -60,6 +60,11 @@ footer p {
 	text-transform: uppercase;
 }
 
+.index-footer p {
+	position: unset;
+	margin-top: 2rem;
+}
+
 /* -----INDEX PAGE ----- */
 .radio {
 	display: flex;
@@ -572,6 +577,10 @@ textarea {
 /* MEDIA QUERIES */
 /* -----INDEX----- */
 @media only screen and (max-width: 750px) {
+	.nav li {
+		font-size: 0.8rem;
+	}
+
 	.searchbar {
 		width: 15rem;
 	}
@@ -583,6 +592,7 @@ textarea {
 	.radio {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 	}
 
 	.radio input[type="radio"] {
@@ -653,6 +663,10 @@ textarea {
 	}
 	.cartitem li {
 		margin: 0 1rem;
+	}
+
+	.total {
+		margin-bottom: 5rem;
 	}
 }
 @media only screen and (min-width: 1100px) {
