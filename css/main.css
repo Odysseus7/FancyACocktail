@@ -459,6 +459,14 @@ textarea {
 	display: block;
 }
 
+.recipe-nav {
+	margin-top: 4rem;
+}
+
+.recipe-footer p {
+	position: unset;
+}
+
 /* -----SOURCES PAGE----- */
 .sources-main {
 	background-color: #18191a;
@@ -666,10 +674,20 @@ textarea {
 }
 
 /* -----RECIPE----- */
+@media only screen and (max-width: 500px) {
+	.recipe-back {
+		font-size: 0.5rem;
+		width: 100%;
+	}
+}
 
 @media only screen and (max-width: 800px) {
 	.recipe-back {
 		font-size: 0.5rem;
+	}
+
+	.recipe-footer p {
+		font-size: 1rem;
 	}
 }
 
