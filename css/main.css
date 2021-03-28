@@ -442,6 +442,54 @@ textarea {
 	display: block;
 }
 
+/* -----SOURCES PAGE----- */
+.sources-main {
+	background-color: #18191a;
+	overflow: hidden;
+}
+
+.sources-hero {
+	height: 50vh;
+	width: 100%;
+	background: url("https://images.unsplash.com/photo-1556881261-e41e8db21055?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+		no-repeat fixed center center;
+	background-size: cover;
+	margin-bottom: 2rem;
+}
+
+.sources-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem;
+}
+
+.sources-logo {
+	margin-bottom: 4rem;
+	animation: fadeIn 2s;
+}
+
+.sources-nav {
+	margin-top: 3rem;
+}
+
+.sources-footer p {
+	position: unset;
+}
+
+.sources-footer ul {
+	margin-top: 2rem;
+	margin-bottom: 6rem;
+}
+
+.main-listitem {
+	padding: 0.3rem 0;
+}
+
+.sources {
+	animation: fadeInRightBig 2s;
+}
+
 /* MEDIA QUERIES */
 /* -----INDEX----- */
 @media only screen and (max-width: 500px) {
@@ -582,6 +630,36 @@ textarea {
 @media only screen and (max-width: 800px) {
 	.recipe-back {
 		font-size: 0.5rem;
+	}
+}
+
+/* -----SOURCES----- */
+
+@media only screen and (min-width: 1100px) {
+	.sources-main {
+		display: flex;
+		width: 100%;
+		min-height: 100vh;
+	}
+
+	.sources-hero {
+		width: 50%;
+		height: auto;
+		background-attachment: unset;
+		margin-bottom: 0;
+	}
+
+	.sources-right {
+		width: 50%;
+		padding: 4rem 8rem;
+	}
+
+	.sources-nav {
+		margin-top: 6rem;
+	}
+
+	.sources-footer {
+		position: unset;
 	}
 }
 
