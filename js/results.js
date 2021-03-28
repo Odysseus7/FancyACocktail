@@ -69,13 +69,16 @@ export const handleError = () => {
 	container.insertAdjacentHTML(
 		"beforebegin",
 		`
-        <div class="back">
+        <div class="results-back">
             <a href="./index.html"><h1>&larr; Go back</h1><a href="./index.html">
         </div>
     `
 	);
 
-	document.querySelector(".container").insertAdjacentHTML(
+	/* prevent vertical scroll bar during animation */
+	container.style.overflow = "hidden";
+
+	container.insertAdjacentHTML(
 		"afterbegin",
 		`<div class="heading">
             <h1 class="errorHeading">404: No cocktails were found</h1>
