@@ -12,8 +12,9 @@
 			<header class="logo">
 				<img src="./img/logo.svg" alt="Logo" />
 			</header>
-			<section class="search">
-				<div class="radio">
+			<form class="search">
+				<fieldset class="radio">
+					<legend>Search based on</legend>
 					<article>
 						<input
 							type="radio"
@@ -28,16 +29,16 @@
 						<input type="radio" id="name" name="filter" value="name" checked />
 						<label for="name" class="radio-label">Name</label>
 					</article>
-				</div>
+				</fieldset>
 
 				<input
-					type="text"
+					type="search"
 					name="search"
 					class="searchbar"
 					placeholder="SEARCH.."
 				/>
-			</section>
-			<footer class="index-footer">
+			</form>
+			<nav class="index-footer">
 				<ul class="nav">
 					<li><a href="./about.html">about us</a></li>
 					<li><a href="./shop.html">shop</a></li>
@@ -45,7 +46,7 @@
 					<li><a href="./sources.html">sources</a></li>
 				</ul>
 				<p>&copy; Chalita Ndunu</p>
-			</footer>
+			</nav>
 		</main>
 
 		<script src="./js/search.js"></script>
