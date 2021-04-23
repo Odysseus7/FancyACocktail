@@ -61,7 +61,7 @@ footer p {
 	text-transform: uppercase;
 }
 
-.index-footer p {
+.index-nav-container p {
 	position: unset;
 	margin-top: 2rem;
 }
@@ -75,6 +75,7 @@ footer p {
 	margin: 0.5rem;
 	padding: 0 2rem;
 }
+
 .radio article input[type="radio"] {
 	position: absolute;
 	opacity: 0;
@@ -206,7 +207,7 @@ footer p {
 	margin-top: 3rem;
 }
 
-.about-footer p {
+.about-nav p {
 	position: unset;
 }
 
@@ -261,15 +262,15 @@ textarea {
 	cursor: pointer;
 }
 
-.conntact-nav {
+.contact-nav-container {
 	margin-top: 1rem;
 }
 
-.contact-footer {
+.contact-nav-container {
 	margin-top: 4rem;
 }
 
-.contact-footer p {
+.contact-nav-container p {
 	position: unset;
 }
 
@@ -333,7 +334,7 @@ textarea {
 	margin-top: 3rem;
 }
 
-.shop-footer p {
+.shop-nav-container p {
 	position: unset;
 }
 
@@ -511,7 +512,7 @@ textarea {
 	display: block;
 }
 
-.recipe-nav {
+.recipe-nav-container {
 	margin-top: 4rem;
 }
 
@@ -550,11 +551,11 @@ textarea {
 	margin-top: 3rem;
 }
 
-.sources-footer p {
+.sources-nav-container p {
 	position: unset;
 }
 
-.sources-footer ul {
+.sources-nav-container ul {
 	margin-top: 4rem;
 	margin-bottom: 6rem;
 	display: flex;
@@ -562,7 +563,7 @@ textarea {
 	justify-content: center;
 }
 
-.sources-footer li {
+.sources-nav-container li {
 	font-size: 1rem;
 	margin-top: 1rem;
 }
@@ -626,7 +627,7 @@ textarea {
 		margin-top: 6rem;
 	}
 
-	.about-footer {
+	.about-nav {
 		position: unset;
 	}
 }
@@ -707,7 +708,7 @@ textarea {
 		margin-top: 6rem;
 	}
 
-	.shop-footer {
+	.shop-nav-container {
 		position: unset;
 	}
 }
@@ -773,11 +774,11 @@ textarea {
 		padding: 4rem 8rem;
 	}
 
-	.sources-footer ul {
+	.sources-nav-container ul {
 		margin-top: 6rem;
 	}
 
-	.sources-footer {
+	.sources-nav-container {
 		position: unset;
 	}
 }
